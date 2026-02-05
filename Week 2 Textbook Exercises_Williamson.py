@@ -160,7 +160,7 @@ pizzas = ['White', 'Olive', 'Plain']
 friend_pizzas = pizzas[:]
 
 pizzas.append("Margherita")
-friends_pizzas.append("Pineapple")
+friend_pizzas.append("Pineapple")
 
 print("My favorite pizzas are:")
 for pizza in pizzas:
