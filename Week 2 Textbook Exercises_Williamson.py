@@ -99,8 +99,26 @@ print(friends)
 # Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
 # Use sort() to change your list so it’s stored in reverse-alphabetical order. Print the list to show that its order has changed.
 
+countries = ['Japan','Morocco','New Zealand', 'Spain', 'China']
+print(countries)
 
+print(sorted(countries)) #doesn't change the order permanently but still prints in alphabetical order
+print(countries) #the same as the original list
 
+print(sorted(countries, reverse=True)) #doesn't change the order permanently but still prints in reverse alphabetical order
+print(countries) #the same as the original list
+
+countries.reverse()
+print(countries) #ordered backwards from original list now
+
+countries.reverse()
+print(countries) # back to original list order
+
+countries.sort() #alphabetical order
+print(countries) #changed the list so that it is in alphabetical order
+
+countries.sort(reverse=True) #reverse-alphabetical order
+print(countries) #changed the list so that it is in reverse-alphabetical order
 
 #------------------------ Exercise 3-11 ----------------------------
 # 3-11. Intentional Error: If you haven’t received an index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program.
