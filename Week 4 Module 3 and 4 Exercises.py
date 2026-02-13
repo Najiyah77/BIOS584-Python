@@ -51,6 +51,14 @@ print(high_risk_patients)
 high_risk_patients = sorted([[glucose, name] for glucose, name in zip(glucose_levels, patient_names) if glucose > 150], reverse=True)
 print(high_risk_patients)
 
+#Creating combined list with zip() - creates a list of tuples
+patient_data = list(zip(glucose_levels, patient_names))
+print(patient_data)
+
+# Create a dictionary from the 2 lists with zip()
+patients_dict = dict(zip(patient_names, glucose_levels))
+print(patients_dict)
+
 #-------------------- Method 5: enumerate()---------------------
 
 
