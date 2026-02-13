@@ -23,6 +23,9 @@ list1 is list2 #False, is checks "are these the same object in memory?". Checks 
 #--------------- Password generator with validation with simple while loops ------------------
 #Take in user input for favorite city
 city = input("Which city did you grow up in?").strip().upper()
+city = "".join(city.split()) #takes every word and creates a list of the separated words
+#alternate way: city.replace(" ", "")
+
 #Validate that user wrote a valid city name. If not valid, make user input city name again
     #while city != city.isalpha(): #NOT VALID CODE
     #while city is not city.isalpha(): #NOT VALID CODE - "is" checks identity, "==" is equality
@@ -38,6 +41,8 @@ while not city.isalpha(): #Best way, pythonic code: reads naturally, shorter and
 
 #Take in user input for favorite animal
 animal = input("What is your favorite animal?").strip().lower()
+animal = "".join(city.split())
+
 #Validate that input is a string with letters. If not valid, make user input animal name again
 while not animal.isalpha():
     print("Please enter a valid animal name with letters and no spaces.")
