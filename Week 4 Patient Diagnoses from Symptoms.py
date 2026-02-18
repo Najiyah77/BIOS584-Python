@@ -9,8 +9,15 @@ patients = [
     ["Grace", ["sore throat"]],
 ]
 
+data_dict = dict(patients) #easiest way I think
+
 #symptoms = [patient[1] for patient in patients]; print(symptoms)
 #Write the for loop version of this list comprehension
+symptoms = []
+for patient in patients:
+    symptoms.append(patient[1])
+print(symptoms)
+
 
 # Initialize empty list to store diagnoses
 patient_diagnosis = []
