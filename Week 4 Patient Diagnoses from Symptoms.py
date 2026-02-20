@@ -14,6 +14,7 @@ data_dict = dict(patients) #easiest way I think
 #symptoms = [patient[1] for patient in patients]; print(symptoms)
 #Write the for loop version of this list comprehension
 symptoms = []
+
 for patient in patients:
     symptoms.append(patient[1])
 print(symptoms)
@@ -22,20 +23,20 @@ print(symptoms)
 # Initialize empty list to store diagnoses
 patient_diagnosis = []
 
-# Loop through each patient (this is one way to write a for loop)
+# Loop through each patient (this is one way to write a for loop. Instead of elif, use if so we check all the possible conditions that a person may have.
 for patient in patients:
     name = patient[0]  # Extract patient name
     symptoms = patient[1]  # Extract symptom list
     # Determine diagnoses using if-elif-else conditional tests
     if ("fever" in symptoms) and ("cough" in symptoms): #Note: if "fever" and "cough" in symptoms is not correct.
         diagnosis = "Possible Flu"
-    elif ("fever" in symptoms) and ("shortness of breath" in symptoms):
+    if ("fever" in symptoms) and ("shortness of breath" in symptoms):
         diagnosis = "Possible COVID-19"
-    elif ("rash" in symptoms) and ("fever" in symptoms):
+    if ("rash" in symptoms) and ("fever" in symptoms):
         diagnosis = "Possible Measles"
-    elif ("fatigue" in symptoms) and ("fever" not in symptoms):
+    if ("fatigue" in symptoms) and ("fever" not in symptoms):
         diagnosis = "Possible Anemia"
-    elif ("headache" in symptoms) or ("fatigue" in symptoms):
+    if ("headache" in symptoms) or ("fatigue" in symptoms):
         diagnosis = "Possible Dehydration or Stress"
     else:
         diagnosis = "No clear diagnosis"
