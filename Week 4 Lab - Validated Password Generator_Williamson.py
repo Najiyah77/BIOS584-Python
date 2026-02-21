@@ -44,6 +44,7 @@ fav_num = input("What is your favorite number?").strip()
 while not fav_num.isdigit():
     print("Invalid input. Enter a positive whole number.")
     fav_num = input("What is your favorite number?").strip()
+
 fav_num = int(fav_num)
 
 
@@ -51,6 +52,7 @@ fav_num = int(fav_num)
 special_char = input("Choose ONE special character from these choices: !@#$%^&*").strip() #Can;t use "select" for some reason
 #Validate that input is one of the special characters and is a string
 allowed_chars = "!@#$%^&*"
+
 while len(special_char) != 1 or special_char not in allowed_chars:
     print("Please enter a valid special character from these choices: !@#$%^&*")
     special_char = input("Choose ONE special character from these choices: !@#$%^&*").strip()
