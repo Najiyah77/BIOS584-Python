@@ -128,3 +128,4 @@ if st.button("Epidemiology Metric Report Generator"):
     st.text(report)
     st.code(report)
 
+#py -m streamlit run "[absolute file path]"

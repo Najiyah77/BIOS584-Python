@@ -28,18 +28,19 @@ for patient in patients:
     name = patient[0]  # Extract patient name
     symptoms = patient[1]  # Extract symptom list
     # Determine diagnoses using if-elif-else conditional tests
+    diagnosis = []
     if ("fever" in symptoms) and ("cough" in symptoms): #Note: if "fever" and "cough" in symptoms is not correct.
-        diagnosis = "Possible Flu"
+        diagnosis.append("Possible Flu")
     if ("fever" in symptoms) and ("shortness of breath" in symptoms):
-        diagnosis = "Possible COVID-19"
+        diagnosis.append("Possible COVID-19")
     if ("rash" in symptoms) and ("fever" in symptoms):
-        diagnosis = "Possible Measles"
+        diagnosis.append("Possible Measles")
     if ("fatigue" in symptoms) and ("fever" not in symptoms):
-        diagnosis = "Possible Anemia"
+        diagnosis.append("Possible Anemia")
     if ("headache" in symptoms) or ("fatigue" in symptoms):
-        diagnosis = "Possible Dehydration or Stress"
-    else:
-        diagnosis = "No clear diagnosis"
+        diagnosis.append("Possible Dehydration or Stress")
+    if diagnosis == []:
+        diagnosis.append("No clear diagnosis")
 
     # Append diagnosis in a list with the patient name and their symptoms
     patient_diagnosis.append([name, symptoms, diagnosis])
