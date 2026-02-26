@@ -17,6 +17,9 @@ for i in range(len(cities)) : # Iterates through each city
 
 print(high_pollution_cities) # print list of high pollution cities
 
+# if i want the double quotations...
+print("[" + ", ".join(f"\"{city}\"" for city in high_pollution_cities) + "]")
+
 #-----------------------------------------------------------------------
 # rewriting the program...
 #-----------------------------------------------------------------------
@@ -29,6 +32,12 @@ for i, pollution in enumerate(pollution_levels):
 
 print(en_high_pollution_cities)
 
+# trying to get the double quotation marks
+print("[" + ", ".join(f"\"{city}\"" for city in en_high_pollution_cities) + "]")
+    # join() takes the sequence of strings and connects them with ", ".
+    # the plus signs are conecting the three separate strings so the first open bracket, the join thingy, and then the closing bracket.
+    # i think this works so far yay
+
 # using zip() function
 zip_high_pollution_cities = []
 for pollution, city in zip(pollution_levels, cities):
@@ -37,6 +46,11 @@ for pollution, city in zip(pollution_levels, cities):
 
 print(zip_high_pollution_cities)
 
+print("[" + ", ".join(f"\"{city}\"" for city in zip_high_pollution_cities) + "]")
+
 # list comprehension
 lc_high_pollution_cities = [cities[i] for i in range(len(cities)) if pollution_levels[i] > threshold]
+
 print(lc_high_pollution_cities)
+
+print("[" + ", ".join(f"\"{city}\"" for city in lc_high_pollution_cities) + "]")

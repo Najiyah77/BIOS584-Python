@@ -101,6 +101,7 @@ if st.button("Epidemiology Metric Report Generator"):
         neg_pre_value = (true_neg_cases / (true_neg_cases + false_neg_cases)) * 100
 
     report = (
+                "----------------------------------------------\n"
                 "Epidemiology Report:\n"
                 "----------------------------------------------\n"
                 f"City: {city}\n"
@@ -120,8 +121,8 @@ if st.button("Epidemiology Metric Report Generator"):
                 f"\tNegative Predictive Value: {neg_pre_value:.3f}%\n"
                 "\n"
                 "Summary:\n"
-                f"The prevalence of {disease} in {city} is {prevalence:.3f}%.\n"
-                f"The case fatality rate is {case_fatality_rate:.3f}%.\n"
+                f"The prevalence of {disease} in {city} is {prevalence:.3f}%,\n"
+                f"with a case fatality rate of {case_fatality_rate:.3f}%.\n"
                 f"Testing sensitivity is {sensitivity:.3f}%.\n"
             )
 
