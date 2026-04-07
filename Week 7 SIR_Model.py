@@ -19,6 +19,21 @@ def sir_model(S, I, R, beta, gamma):
     dI_dt = beta * ((S*I)/(S+I+R)) - (gamma*I)
     dR_dt = gamma * I
     return dS_dt, dI_dt, dR_dt
+
+
+def sir_model(S, I, R, beta, gamma, mu):
+    """'
+    This function takes in a specified infection rate (beta), recovery rate (gamma) and the
+    current number of susceptible (S), infected (I) and recovered individuals (R) for a given day. N is equivalent to S+I+R.
+    It returns the rate of change in the number of susceptible individuals (dS/dt), change in the number
+    of infected individuals (dI/dt), and change in the number of recovered individuals (dS/dt) for that day. The people
+    who died are (mu*I).
+    """
+    dS_dt = -beta * ((S * I) / (S + I + R))
+    dI_dt = beta * ((S * I) / (S + I + R)) - (gamma * I) - (mu * I)
+    dR_dt = gamma * I
+    dD_dt = mu*I
+    return dS_dt, dI_dt, dR_dt, dD_dt
 #-------------------------------------------------------------------
 
 #---------------------------Main simulation-------------------------
