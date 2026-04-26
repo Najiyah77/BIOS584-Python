@@ -1,0 +1,17 @@
+Country,Region,Year,Water Source Type,Lead Concentration (µg/L),Bacteria Count (CFU/mL),Water Treatment Method,Access to Clean Water (% of Population),"Diarrheal Cases per 100,000 people","Cholera Cases per 100,000 people",GDP per Capita (USD),Healthcare Access Index (0-100),Urbanization Rate (%),Sanitation Coverage (% of Population),Population Density (people per km²)
+USA,West,2024,Well,8.01,2825,Chlorination,35.07,432,1,7982,85.83,78.98,75.94,49
+USA,South,2024,River,12.01,947,Chlorination,59.48,425,14,58560,3.01,58.24,45.99,169
+USA,North,2024,Lake,14.25,1488,Filtration,94.4,121,33,41790,12.81,23.55,81.98,874
+USA,Central,2024,Spring,10.46,3249,,30.48,247,42,16821,81.21,60.24,57.05,325
+USA,Central,2024,Pond,4.73,4431,Filtration,42.85,180,40,24020,99.27,18.15,93.42,659
+USA,North,2024,Tap,4.01,27,,71.66,170,6,67104,83.07,28.92,59.43,526
+USA,East,2024,Tap,1.91,1827,Boiling,35.82,187,5,91705,94.57,80.88,52.73,941
+USA,Central,2024,Lake,17.78,4530,,39.09,312,21,83443,17.1,13.1,45.02,419
+USA,North,2024,Well,3.5,2293,Chlorination,77.56,26,21,92446,51.37,78.47,55.32,975
+USA,West,2024,Pond,16.67,1497,Chlorination,67.24,82,11,58173,63.03,23.57,48.46,666
+USA,West,2024,Well,11.86,4166,Boiling,75.8,89,15,66951,68.61,81.79,83.97,674
+USA,West,2024,Well,2.69,3518,Chlorination,41.36,50,11,39113,80.92,78.26,25.22,124
+USA,North,2024,Well,1.6,4321,Chlorination,73.23,146,46,81863,93.18,65.79,68.85,102
+USA,East,2024,Spring,13.51,4068,Chlorination,50.55,493,48,60020,68.35,23.4,84.79,465
+USA,South,2024,Well,12.98,471,Chlorination,99.88,91,45,99444,89.89,72.06,74.83,71
+USA,Central,2024,Spring,15.7,1656,,66.94,227,10,5850,53.33,75.19,78.32,480
