@@ -9,7 +9,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 #import your functions module
-import SIR_SIRD_SIRDV_Functions_1 as functions
+import sys # need this because pycharm cant find my file weirdly
+sys.path.append(r"C:\Users\Najiy\OneDrive\Desktop\PycharmProjects\BIOS584-Python\SIR Model")
+import SIR_SIRD_SIRDV_Functions_WILLIAMSON as functions
 #=========================================================================================
 # Get user input
 #=========================================================================================
@@ -118,6 +120,36 @@ elif MODEL_CHOICE == "SIRD":
     filename = f"SIRD_N{N}_{DAYS}Days_Rates{BETA},{GAMMA},{MU}.png"
 else:  # SIRDV
     filename = f"SIRDV_N{N}_{DAYS}Days_Rates{BETA},{GAMMA},{MU},{VAC_RATE}.png"
+
+t = np.arange(0, 100) #array of time points (0 to 100 days)
+plt.figure(figsize=(10,6))
+plt.plot(t, Sim_S, label="Susceptible")
+plt.plot(t, Sim_I, label="Infected")
+plt.plot(t, Sim_R, label="Recovered")
+
+#adding deaths if choice is SIRD or SIRDV
+if MODEL_CHOICE in ["SIRD", "SIRDV"]:
+    plt.plot(t, Sim_D, label="Deaths")
+
+#adding vaccinated if SIRDV
+if MODEL_CHOICE == "SIRDV":
+    plt.plot(t, Sim_V, label="Vaccinated")
+
+# editing the label per model choice
+xlabel_text = f"Days \n Simulation Parameters: S=997, I=3, Beta = {BETA}, Gamma = {GAMMA}."
+if MODEL_CHOICE in ["SIRD", "SIRDV"]:
+    xlabel_text += f", Mu={MU}"
+if MODEL_CHOICE == "SIRDV":
+    xlabel_text += f", Vacc Rate={VAC_RATE}"
+
+plt.xlabel(xlabel_text)
+plt.ylabel("Number of People")
+title_text=f"{MODEL_CHOICE} Model (N={N}, {DAYS} Days)"
+plt.title(title_text)
+plt.legend()
+plt.grid(True)
+plt.savefig(filename)
+plt.show() #Make sure to do plt.savefig before you type plt.show() otherwise, the plot will be empty
 
 #Example: SIRD_N1000_100Days_Rates.4,.035,.005.png
 #(if the user requested a SIRD model of 100 days for 1000 people with infection,recovery & death rates of .4,.035,.005)

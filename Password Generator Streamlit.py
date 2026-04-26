@@ -38,4 +38,6 @@ if st.button("Generate Password"):
         st.code(user_password) #allows the user to copy their new password
 
 
+# type the following into the terminal
 #py -m streamlit run "[absolute file path]"
+# soooooo its: py -m streamlit run "C:\Users\Najiy\OneDrive\Desktop\PycharmProjects\BIOS584-Python\Password Generator Streamlit.py"
